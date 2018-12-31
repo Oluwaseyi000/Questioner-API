@@ -1,6 +1,12 @@
 let express = require('express');
 let router = express.Router();
 
+let meetupController = require('./controller/Meetup');
+
+
+router.post('/meetups', meetupController.createMeetup);
+
+
 
 
 router.route('*')

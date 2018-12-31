@@ -44,8 +44,7 @@ describe('/POST A MEETUP', () => {
          chai.request(server)
             .post('/api/v1/meetups')
             .send(newMeetup)
-            .end((err, res) => {  
-               console.log(res.body);             
+            .end((err, res) => {               
                assert.isObject(res.body);
                assert.equal(res.status, 200);
                assert.equal(res.body.status, 201);
